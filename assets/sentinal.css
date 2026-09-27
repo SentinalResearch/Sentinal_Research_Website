@@ -72,3 +72,23 @@
 .p-grid > div { display:flex; flex-direction:column; gap:8px; }
 .p-grid b { font-size:24px; letter-spacing:-0.02em; } .p-grid span { color:var(--text-2); text-wrap:pretty; }
 .cta { min-height:60vh; display:flex; flex-direction:column; justify-content:center; gap:24px; padding-top:96px; padding-bottom:96px; }
+
+/* Mobile Adjustments */
+@media (max-width: 760px) {
+  .block { padding-top: 60px; padding-bottom: 60px; }
+  .showcase-header { min-height: auto; }
+  .mock { min-height: 380px; font-size: 11px; }
+  .m-row { grid-template-columns: 76px minmax(0,1fr) minmax(0,.8fr); gap: 8px; }
+  .m-main { padding: 14px 16px; }
+  .states .tag { font-size: 11px; padding: 0 10px 0 8px; }
+  .yn span { height: 36px; }
+}
+
+@media (max-width: 540px) {
+  .m-row { grid-template-columns: minmax(0,1fr); padding: 12px 0; gap: 8px; }
+  .m-row .tag { justify-self: start; }
+  .m-fact { font-size: 11px; }
+  .m-head { font-size: 12px; }
+  .f { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; }
+  .f b { font-size: 18px; }
+}
