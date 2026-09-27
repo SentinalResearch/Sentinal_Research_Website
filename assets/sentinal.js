@@ -56,6 +56,11 @@
     var s = STEPS[idx];
     if (!s) return;
 
+    if (showcaseMock) {
+      showcaseMock.classList.remove('step-0', 'step-1', 'step-2', 'step-3');
+      showcaseMock.classList.add('step-' + idx);
+    }
+
     if (stepCard) {
       stepCard.style.opacity = '0';
       stepCard.style.transform = 'translateY(10px)';
@@ -102,20 +107,12 @@
       setStep(idx);
 
       if (showcaseMock && !reduce) {
-        var tx = 0;
-        var scale = 1;
-        
-        if (window.innerWidth <= 820) {
-          var maxPan = window.innerWidth - 800 - 48; // 800px mock width, 48px padding
-          if (maxPan > 0) maxPan = 0;
-          if (idx === 0 || idx === 1) tx = maxPan / 2; // Center (main list)
-          else if (idx === 2) tx = maxPan; // Right (terminal)
-          else if (idx === 3) tx = 0; // Left (history)
+        if (window.innerWidth > 820) {
+          var scale = 1 - Math.abs(progress - 0.5) * 0.05;
+          showcaseMock.style.transform = 'scale(' + scale + ')';
         } else {
-          scale = 1 - Math.abs(progress - 0.5) * 0.05;
+          showcaseMock.style.transform = 'none';
         }
-        
-        showcaseMock.style.transform = 'translateX(' + tx + 'px) scale(' + scale + ')';
       }
     }
   }
