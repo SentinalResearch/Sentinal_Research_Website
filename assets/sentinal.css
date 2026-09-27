@@ -13,7 +13,7 @@
 .n { font-size:12px; color:var(--text-3); }
 
 /* mock */
-.mock { display:flex; min-height:460px; background:var(--bg-0); box-shadow:0 0 0 1px var(--line-strong), 0 60px 120px -40px rgba(0,0,0,.55); font-size:12px; overflow:hidden; }
+.mock { width:100%; max-width:1080px; margin:0 auto; display:flex; min-height:460px; background:var(--bg-0); box-shadow:0 0 0 1px var(--line-strong), 0 60px 120px -40px rgba(0,0,0,.55); font-size:12px; overflow:hidden; transform-origin:50% 0; transition:transform 0.4s ease, opacity 0.4s ease; }
 .mock.reveal { transform:translateY(60px) scale(.94); }
 .mock.reveal.in { transform:none; }
 .m-side { width:200px; flex:none; background:var(--bg-1); border-right:1px solid var(--line); padding:16px 12px; display:flex; flex-direction:column; gap:3px; }
@@ -77,7 +77,7 @@
 @media (max-width: 760px) {
   .block { padding-top: 60px; padding-bottom: 60px; }
   .showcase-header { min-height: auto; }
-  .mock { min-height: 380px; font-size: 11px; width: 800px; max-width: none; transform-origin: left center; transition: transform 0.6s var(--ease); }
+  .mock { min-height: 380px !important; font-size: 11px !important; width: 800px !important; max-width: none !important; transform-origin: left center !important; transition: transform 0.6s var(--ease) !important; }
   .m-row { grid-template-columns: auto minmax(0,1fr); grid-template-areas: "tag fact" "name name"; gap: 8px; padding: 12px 0; }
   .m-row .tag { grid-area: tag; justify-self: start; }
   .m-fact { grid-area: fact; justify-self: end; font-size: 11px; }
