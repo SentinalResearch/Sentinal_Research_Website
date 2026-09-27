@@ -38,7 +38,7 @@
 .yn span { height:28px; display:flex; align-items:center; justify-content:center; background:var(--text-1); color:var(--bg-0); font:700 12px 'JetBrains Mono', monospace; }
 .yn .open { background:var(--accent); color:#fff; font-family:'Archivo', sans-serif; }
 .m-term { flex:1; background:#0C0C0C; color:#D4D4D0; padding:10px 12px; font-size:10.5px; line-height:15px; display:flex; flex-direction:column; justify-content:flex-end; min-height:120px; }
-@media (max-width:820px) { .m-side, .m-panel { display:none; } }
+@media (max-width:820px) { /* panels will be panned to, not hidden */ }
 
 /* tags */
 .tag { display:inline-flex; align-items:center; gap:6px; height:22px; padding:0 8px 0 7px; font-size:10.5px; font-weight:700; letter-spacing:.04em; color:var(--ink); white-space:nowrap; justify-self:start; }
@@ -77,7 +77,7 @@
 @media (max-width: 760px) {
   .block { padding-top: 60px; padding-bottom: 60px; }
   .showcase-header { min-height: auto; }
-  .mock { min-height: 380px; font-size: 11px; }
+  .mock { min-height: 380px; font-size: 11px; width: 800px; max-width: none; transform-origin: left center; transition: transform 0.6s var(--ease); }
   .m-row { grid-template-columns: auto minmax(0,1fr); grid-template-areas: "tag fact" "name name"; gap: 8px; padding: 12px 0; }
   .m-row .tag { grid-area: tag; justify-self: start; }
   .m-fact { grid-area: fact; justify-self: end; font-size: 11px; }

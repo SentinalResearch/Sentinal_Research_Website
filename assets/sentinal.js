@@ -102,9 +102,20 @@
       setStep(idx);
 
       if (showcaseMock && !reduce) {
-        // Optional subtle perspective scaling/moving
-        var scale = 1 - Math.abs(progress - 0.5) * 0.05;
-        showcaseMock.style.transform = 'scale(' + scale + ')';
+        var tx = 0;
+        var scale = 1;
+        
+        if (window.innerWidth <= 820) {
+          var maxPan = window.innerWidth - 800 - 48; // 800px mock width, 48px padding
+          if (maxPan > 0) maxPan = 0;
+          if (idx === 0 || idx === 1) tx = maxPan / 2; // Center (main list)
+          else if (idx === 2) tx = maxPan; // Right (terminal)
+          else if (idx === 3) tx = 0; // Left (history)
+        } else {
+          scale = 1 - Math.abs(progress - 0.5) * 0.05;
+        }
+        
+        showcaseMock.style.transform = 'translateX(' + tx + 'px) scale(' + scale + ')';
       }
     }
   }
