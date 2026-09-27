@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentinal — Every terminal on every machine, at a glance</title>
+<meta name="description" content="Sentinal: every terminal on every machine, at a glance. A local-first control plane for long-running jobs. Coming soon.">
+<meta property="og:title" content="Sentinal — coming soon">
+<meta property="og:description" content="Every terminal on every machine, at a glance.">
+<meta property="og:image" content="../assets/og-sentinal.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="../assets/favicon-sentinal.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/sentinal.css">
+<script>try{var t=localStorage.getItem('sr-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 22L13.5 2" stroke="currentColor" stroke-width="3.4" stroke-linecap="square"/><circle cx="18" cy="18.5" r="3.4" fill="#3D5AFE"/></svg>
+    <span>Sentinal</span>
+    <span class="pill soon">COMING SOON</span>
+  </a>
+  <nav class="nav-links">
+    <a href="../index.html">← Sentinal Research</a>
+    <a href="https://github.com/SentinalResearch" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <button class="theme" id="themeBtn" type="button">Light</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section (Centered & Perfectly Aligned Buttons) -->
+  <section class="hero wrap" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:calc(100vh - 60px); padding:48px 24px 72px;">
+    <div class="hero-inner" style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:28px; max-width:960px;">
+      <div class="hero-mark" style="display:flex; flex-direction:column; align-items:center; gap:14px;">
+        <svg class="draw" width="88" height="88" viewBox="0 0 24 24" fill="none" aria-label="Sentinal"><path pathLength="1" d="M5 22L13.5 2" stroke="var(--text-1)" stroke-width="3.4" stroke-linecap="square"/><circle cx="18" cy="18.5" r="3.4" fill="var(--accent)"/></svg>
+        <span class="mono label">sentinal · coming soon</span>
+      </div>
+      <h1 class="display" style="margin:0; text-align:center; font-size:clamp(44px,7.2vw,96px); line-height:0.98; font-weight:800; letter-spacing:-0.05em;">Every terminal on every machine, <span class="muted">at a glance.</span></h1>
+      <p class="lede" style="margin:0 auto; text-align:center; max-width:600px;">A local-first control plane for the long jobs you run on your own machines. Start something, walk away, and check it from any browser or your phone.</p>
+      
+      <!-- Perfectly Aligned Buttons Side-by-Side -->
+      <div class="row" style="display:flex; align-items:center; justify-content:center; gap:12px;">
+        <a class="btn blue" href="https://github.com/SentinalResearch" target="_blank" rel="noopener noreferrer">Follow on GitHub</a>
+        <a class="btn line" href="../index.html">← Sentinal Research</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Steps Showcase Intro Section (1-to-1 with Design Handoff) -->
+  <section class="showcase-section" id="showcaseSection" style="height:400vh; position:relative; z-index:10;">
+    <div class="sticky wrap" style="position:sticky; top:60px; height:calc(100vh - 60px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; overflow:hidden; perspective:1600px;">
+      
+      <!-- Active Step Header Card (Question 01 to 04) -->
+      <div class="showcase-header" style="position:relative; min-height:130px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+        <div id="stepCard" style="display:flex; flex-direction:column; align-items:center; gap:10px; transition:opacity 0.35s ease, transform 0.35s var(--ease);">
+          <span id="stepNumber" class="mono acc-fg" style="font-size:13px; font-weight:700; letter-spacing:0.08em;">01 / 04</span>
+          <h2 id="stepTitle" class="h2" style="margin:0; text-align:center; font-size:clamp(32px,4.8vw,54px); line-height:1.02; letter-spacing:-0.04em;">What am I running?</h2>
+          <p id="stepDesc" class="lede" style="margin:0 auto; text-align:center; max-width:640px; font-size:17px; color:var(--text-2);">Every session on every machine, in one list. Anything that needs you rises to the top.</p>
+        </div>
+      </div>
+
+      <!-- Interactive Mock Dashboard UI -->
+      <div class="mock showcase-mock" id="showcaseMock" style="width:100%; max-width:1080px; transform-origin:50% 0; transition:transform 0.4s ease, opacity 0.4s ease;">
+        <aside class="m-side">
+        <div class="m-brand"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 22L13.5 2" stroke="var(--text-1)" stroke-width="3.4" stroke-linecap="square"/><circle cx="18" cy="18.5" r="3.4" fill="var(--accent)"/></svg>Sentinal</div>
+        <span class="m-nav on">Overview</span><span class="m-nav">Split view</span><span class="m-nav">History</span><span class="m-nav">Recipes</span>
+        <span class="m-over">MACHINES</span>
+        <span class="m-mach"><i class="sq run"></i>RTX-PC</span><span class="m-mach"><i class="sq run"></i>Mac Mini</span><span class="m-mach off"><i class="sq off"></i>MacBook</span>
+      </aside>
+      <div class="m-main" style="text-align:left;">
+        <span class="m-title">Overview</span>
+        <div class="m-grid">
+          <div class="m-table" id="mockListArea" style="transition:opacity 0.4s ease;">
+            <div class="m-head">RTX-PC <span>· Ryzen 9 · RTX 4090 24 GB</span></div>
+            <div class="m-row"><span class="tag running">RUNNING</span><span class="m-name"><b>Qwen Training</b><em>python train.py --config moe.yaml</em></span><span class="m-fact">epoch 68/100 · 1h31m</span></div>
+            <div class="m-row"><span class="tag running">RUNNING</span><span class="m-name"><b>vLLM</b><em>vllm serve Qwen/Qwen3-8B --port 8000</em></span><span class="m-fact">serving on :8000</span></div>
+            <div class="m-row"><span class="tag failed">FAILED</span><span class="m-name"><b>pytest</b><em>pytest tests/</em></span><span class="m-fact">3 failed · 182 passed</span></div>
+            <div class="m-row"><span class="tag idle">IDLE</span><span class="m-name"><b>shell</b><em>~/Projects/TIM</em></span><span class="m-fact">—</span></div>
+            <div class="m-head" style="margin-top:14px">Mac Mini <span>· M2 Pro · 32 GB</span></div>
+            <div class="m-row"><span class="tag waiting">WAITING</span><span class="m-name"><b>npm install</b><em>Continue? [y/N]</em></span><span class="m-fact">input needed</span></div>
+            <div class="m-row"><span class="tag stalled">STALLED</span><span class="m-name"><b>Compression</b><em>no output 14m</em></span><span class="m-fact">CPU 0 %</span></div>
+          </div>
+          <div class="m-panel">
+            <div class="m-prompt" id="mockReachArea" style="transition:opacity 0.4s ease;"><span class="m-over y">MAC MINI · NPM INSTALL</span><span class="mono big">Continue? [y/N]</span><div class="yn"><span>y</span><span>n</span><span class="open">Open terminal</span></div></div>
+            <div class="m-term mono"><span>epoch 66/100  loss 0.39</span><span>epoch 67/100  loss 0.38</span><span>epoch 68/100  loss 0.37</span></div>
+            <div class="m-hist-box" id="mockHistArea" style="display:flex; flex-direction:column; padding-top:6px; border-top:1px solid var(--line); transition:opacity 0.4s ease;">
+              <span style="font-weight:800; font-size:11px; padding-bottom:4px;">History</span>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-3); display:flex; justify-content:space-between;"><span>$ python train.py</span><span>1h31m</span></div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-3); display:flex; justify-content:space-between;"><span>$ vllm serve Qwen3-8B</span><span>8000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Step Indicator Dots/Bars (1-to-1 with Design Handoff) -->
+    <div class="step-indicators" id="stepIndicators" style="display:flex; justify-content:center; gap:8px;">
+      <span class="step-dot active" data-step="0" style="width:36px; height:4px; background:var(--accent); border-radius:2px; transition:all 0.3s;"></span>
+      <span class="step-dot" data-step="1" style="width:12px; height:4px; background:var(--bg-2); border-radius:2px; transition:all 0.3s;"></span>
+      <span class="step-dot" data-step="2" style="width:12px; height:4px; background:var(--bg-2); border-radius:2px; transition:all 0.3s;"></span>
+      <span class="step-dot" data-step="3" style="width:12px; height:4px; background:var(--bg-2); border-radius:2px; transition:all 0.3s;"></span>
+    </div>
+  </div>
+</section>
+
+  <!-- 68% Training Progress & Health Evidence (1-to-1 with Design Handoff) -->
+  <section class="wrap block" style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; padding-top:72px; padding-bottom:72px;">
+    <span class="mono muted" style="font-size:13px; font-weight:700; letter-spacing:0.1em; color:var(--text-3);">QWEN TRAINING · RTX-PC</span>
+    <span class="display reveal" style="font-size:clamp(120px,22vw,300px); line-height:0.82; font-weight:800; letter-spacing:-0.07em;">68<span style="font-size:0.38em; letter-spacing:-0.02em; margin-left:0.08em;">%</span></span>
+    <div class="reveal" style="width:min(720px,90%); height:8px; background:var(--bg-2); margin:0 auto;"><div style="width:68%; height:100%; background:var(--s-running);"></div></div>
+    <div class="row reveal d1" style="justify-content:center; gap:40px; font-size:17px; color:var(--text-2);">
+      <span>epoch <b style="color:var(--text-1)">68/100</b></span>
+      <span>loss <b style="color:var(--text-1)">0.41 → 0.37</b></span>
+      <span>GPU <b style="color:var(--text-1)">96 %</b></span>
+      <span>VRAM <b style="color:var(--text-1)">21.4 / 24 GB</b></span>
+    </div>
+    <p class="lede reveal d2" style="max-width:560px; margin:0 auto; text-align:center; font-size:19px; line-height:28px; color:var(--text-2);">Progress, resources and a health check that shows its evidence: loss improving for 5 checks, last output 8s ago.</p>
+  </section>
+
+  <!-- Mobile App Section -->
+  <section class="wrap block" style="align-items:center; justify-content:center; padding-top:120px; overflow:hidden">
+    <div style="width:100%; max-width:1080px; display:flex; flex-wrap:wrap; gap:64px; align-items:center; justify-content:center">
+      <!-- Left: Text content -->
+      <div class="reveal" style="flex:1 1 340px; max-width:460px; display:flex; flex-direction:column; gap:20px;">
+        <span class="mono acc-fg" style="font-size:12px;">on your phone</span>
+        <h2 class="h2" style="font-size:clamp(36px,4.6vw,64px); line-height:1; letter-spacing:-0.045em; text-align:left; margin:0;">Walk away.<br>Answer from anywhere.</h2>
+        <p class="lede" style="font-size:18px; line-height:27px; text-align:left;">Install Sentinal to your home screen. Get a notification when a job fails or waits for input, answer y / n in one tap, and open the real terminal when you need it.</p>
+        
+        <div style="display:flex; flex-direction:column; border-top:1px solid var(--line); margin-top:8px;">
+          <div style="display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; padding:12px 0; border-bottom:1px solid var(--line);">
+            <span class="mono muted" style="font-size:12px; padding-top:2px">01</span>
+            <span style="font-size:15px; line-height:22px"><b>Glance.</b> <span class="muted">Needs you rises to the top: failed, waiting, stalled.</span></span>
+          </div>
+          <div style="display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; padding:12px 0; border-bottom:1px solid var(--line);">
+            <span class="mono muted" style="font-size:12px; padding-top:2px">02</span>
+            <span style="font-size:15px; line-height:22px"><b>Answer.</b> <span class="muted">y / n on prompts without opening a terminal.</span></span>
+          </div>
+          <div style="display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; padding:12px 0; border-bottom:1px solid var(--line);">
+            <span class="mono muted" style="font-size:12px; padding-top:2px">03</span>
+            <span style="font-size:15px; line-height:22px"><b>Act.</b> <span class="muted">Ctrl-C with a confirm step, never one accidental tap.</span></span>
+          </div>
+          <div style="display:grid; grid-template-columns:28px minmax(0,1fr); gap:10px; padding:12px 0; border-bottom:1px solid var(--line);">
+            <span class="mono muted" style="font-size:12px; padding-top:2px">04</span>
+            <span style="font-size:15px; line-height:22px"><b>Get told.</b> <span class="muted">Notifications per session: finished, error, stalled, checkpoint.</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Phone mockup -->
+      <div class="reveal d1" style="flex:0 0 auto; position:relative;">
+        <div style="position:absolute; inset:-80px; background:radial-gradient(closest-side, color-mix(in srgb, var(--accent) 22%, transparent), transparent); pointer-events:none"></div>
+        <div style="position:relative; width:320px; height:668px; border-radius:48px; padding:10px; background:#1A1A1A; box-shadow:0 0 0 1.5px #3A3A3A, 0 50px 100px -30px rgba(0,0,0,.6)">
+          <div style="position:relative; width:100%; height:100%; border-radius:38px; overflow:hidden; background:var(--bg-0); display:flex; flex-direction:column">
+            <!-- Notch -->
+            <div style="position:absolute; top:10px; left:50%; transform:translateX(-50%); width:96px; height:28px; border-radius:14px; background:#000; z-index:3"></div>
+            
+            <!-- App Header -->
+            <div style="padding:52px 16px 0; display:flex; flex-direction:column; gap:12px">
+              <div style="display:flex; align-items:baseline; justify-content:space-between">
+                <span style="font-size:28px; line-height:30px; font-weight:800; letter-spacing:-0.03em">Sessions</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 22L13.5 2" stroke="currentColor" stroke-width="3.4" stroke-linecap="square"/><circle cx="18" cy="18.5" r="3.4" fill="var(--accent)"/></svg>
+              </div>
+              
+              <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:2px solid var(--text-1); font-size:11px">
+                <span style="display:flex; flex-direction:column; padding:7px 6px 8px 0"><b style="font-size:12.5px">RTX-PC</b><span style="color:var(--text-2)">Online · 4</span></span>
+                <span style="display:flex; flex-direction:column; padding:7px 6px 8px; border-left:1px solid var(--line)"><b style="font-size:12.5px">Mac Mini</b><span style="color:var(--text-2)">Online · 2</span></span>
+                <span style="display:flex; flex-direction:column; padding:7px 6px 8px; border-left:1px solid var(--line); color:var(--text-3)"><b style="font-size:12.5px">MacBook</b><span>Offline 14m</span></span>
+              </div>
+            </div>
+            
+            <!-- List -->
+            <div style="flex:1; padding:6px 16px 0; display:flex; flex-direction:column">
+              <div style="display:flex; justify-content:space-between; padding:8px 0 6px; border-bottom:2px solid var(--text-1); font-size:14px; font-weight:800">
+                <span>Needs you</span><span>2</span>
+              </div>
+              
+              <!-- Item 1 (Waiting) -->
+              <div style="display:flex; flex-direction:column; gap:8px; padding:10px 0; border-bottom:1px solid var(--line);">
+                <div style="display:flex; align-items:center; gap:8px">
+                  <span class="tag waiting" style="height:20px; font-size:10px; padding:0 6px 0 5px;">WAITING</span>
+                  <b style="flex:1; font-size:14px">npm install</b>
+                  <span style="font-size:11px; color:var(--text-3)">Mac Mini</span>
+                </div>
+                <div style="display:grid; grid-template-columns:minmax(0,1fr) 44px 44px; gap:2px">
+                  <span style="display:flex; align-items:center; padding:0 10px; background:var(--bg-1); font-family:'JetBrains Mono',monospace; font-size:12px">answered y</span>
+                  <span style="height:44px; display:flex; align-items:center; justify-content:center; background:var(--text-1); color:var(--bg-0); font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700;">y</span>
+                  <span style="height:44px; display:flex; align-items:center; justify-content:center; background:var(--text-1); color:var(--bg-0); font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700">n</span>
+                </div>
+              </div>
+              
+              <!-- Item 2 (Failed) -->
+              <div style="display:flex; flex-direction:column; gap:2px; padding:10px 0; border-bottom:1px solid var(--line)">
+                <div style="display:flex; align-items:center; gap:8px">
+                  <span class="tag failed" style="height:20px; font-size:10px; padding:0 6px 0 5px;">FAILED</span>
+                  <b style="flex:1; font-size:14px">pytest</b>
+                  <span style="font-size:11px; color:var(--text-3)">RTX-PC</span>
+                </div>
+                <span style="font-size:12px; color:var(--text-2)">3 failed · 182 passed · 42s</span>
+              </div>
+              
+              <!-- Item 3 (Stalled) -->
+              <div style="display:flex; flex-direction:column; gap:2px; padding:10px 0; border-bottom:1px solid var(--line)">
+                <div style="display:flex; align-items:center; gap:8px">
+                  <span class="tag stalled" style="height:20px; font-size:10px; padding:0 6px 0 5px;">STALLED</span>
+                  <b style="flex:1; font-size:14px">Compression</b>
+                  <span style="font-size:11px; color:var(--text-3)">Mac Mini</span>
+                </div>
+                <span style="font-size:12px; color:var(--text-2)">no output 14m · CPU 0 %</span>
+              </div>
+              
+              <!-- Item 4 (Running) -->
+              <div style="display:flex; flex-direction:column; gap:6px; padding:12px 0">
+                <div style="display:flex; align-items:center; gap:8px">
+                  <b style="flex:1; font-size:14px">Qwen Training</b>
+                  <span class="tag running" style="height:20px; font-size:10px; padding:0 6px 0 5px;">RUNNING</span>
+                </div>
+                <div style="display:flex; align-items:flex-end; gap:8px">
+                  <span style="font-size:36px; line-height:30px; font-weight:800; letter-spacing:-0.05em">68 %</span>
+                  <span style="font-size:11px; color:var(--text-2)">epoch 68/100 · 1h31m</span>
+                </div>
+                <div style="height:4px; background:var(--bg-2)"><div style="width:68%; height:100%; background:var(--s-running);"></div></div>
+              </div>
+              
+            </div>
+            <!-- Home bar indicator -->
+            <div style="height:22px; display:flex; align-items:flex-start; justify-content:center"><span style="width:110px; height:4px; border-radius:2px; background:var(--text-1); opacity:.5"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Coming (Feature List) -->
+  <section class="wrap block">
+    <h2 class="h2 reveal">What’s coming.</h2>
+    <div class="f-list">
+      <div class="f reveal"><span class="mono n">Overview</span><b>All machines, all sessions.</b><span>Grouped by machine. Failed, waiting and stalled sessions surface first. Offline machines stay visible with their last-seen time.</span></div>
+      <div class="f reveal"><span class="mono n">Health</span><b>Deterministic, with evidence.</b><span>Progress, activity, resources, stability and errors, each with the facts behind it: “loss improving for 5 checks · GPU 96 % · last output 8s ago”.</span></div>
+      <div class="f reveal"><span class="mono n">Terminal</span><b>The real thing, one click away.</b><span>Full terminals in the browser, up to four side by side. Destructive keys always ask first.</span></div>
+      <div class="f reveal"><span class="mono n">Recipes</span><b>Run it the same way again.</b><span>Save a command with parameters and defaults, pick a machine, check the rendered command, run.</span></div>
+      <div class="f reveal"><span class="mono n">History</span><b>Every command, searchable.</b><span>Filter by machine, project, result and date.</span></div>
+    </div>
+  </section>
+
+  <!-- Nine States Showcase -->
+  <section class="wrap block">
+    <h2 class="h2 reveal">Nine states. Readable from across the room.</h2>
+    <div class="states reveal d1" style="margin-top:8px;">
+      <span class="tag created">CREATED</span><span class="tag idle">IDLE</span><span class="tag running">RUNNING</span><span class="tag waiting">WAITING</span><span class="tag stalled">STALLED</span><span class="tag completed">COMPLETED</span><span class="tag failed">FAILED</span><span class="tag interrupted">INTERRUPTED</span><span class="tag disconnected">DISCONNECTED</span>
+    </div>
+    <p class="lede reveal d2" style="margin-top:12px;">Every state has its own color, icon and label, so none depends on color alone.</p>
+  </section>
+
+  <!-- Local-First Principles -->
+  <section class="wrap block">
+    <div class="p-grid">
+      <div class="reveal"><b>Local-first.</b><span>Self-hosted on your own machines. Nothing leaves them.</span></div>
+      <div class="reveal d1"><b>Not an AI terminal.</b><span>A calm dashboard over structured state. Any assistant features will stay quiet and never run commands on their own.</span></div>
+      <div class="reveal d2"><b>Built for dim rooms.</b><span>Dark by default, with a light theme, and status readable from arm’s length.</span></div>
+    </div>
+  </section>
+
+  <!-- CTA Section (Centered) -->
+  <section class="wrap cta" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+    <p class="display reveal" style="text-align:center;">Coming soon.</p>
+    <p class="lede reveal d1" style="text-align:center; max-width:540px; margin:0 auto;">Sentinal is the first product from Sentinal Research.</p>
+    <div class="row reveal d2" style="display:flex; align-items:center; justify-content:center; gap:12px; margin-top:8px;">
+      <a class="btn blue" href="https://github.com/SentinalResearch" target="_blank" rel="noopener noreferrer">Follow on GitHub</a>
+      <a class="btn line" href="../index.html">Back to Sentinal Research</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot wrap" style="color:var(--text-3)">
+  <span class="brand-sm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 22L13.5 2" stroke="var(--text-2)" stroke-width="3.4" stroke-linecap="square"/><circle cx="18" cy="18.5" r="3.4" fill="#3D5AFE"/></svg>Sentinal</span>
+  <span>A <a href="../index.html">Sentinal Research</a> project.</span>
+</footer>
+
+<script src="../assets/sentinal.js"></script>
+</body>
+</html>
