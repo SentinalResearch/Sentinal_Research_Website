@@ -78,16 +78,16 @@
   .block { padding-top: 60px; padding-bottom: 60px; }
   .showcase-header { min-height: auto; }
   .mock { min-height: 380px; font-size: 11px; }
-  .m-row { grid-template-columns: 76px minmax(0,1fr) minmax(0,.8fr); gap: 8px; }
+  .m-row { grid-template-columns: auto minmax(0,1fr); grid-template-areas: "tag fact" "name name"; gap: 8px; padding: 12px 0; }
+  .m-row .tag { grid-area: tag; justify-self: start; }
+  .m-fact { grid-area: fact; justify-self: end; font-size: 11px; }
+  .m-name { grid-area: name; }
   .m-main { padding: 14px 16px; }
   .states .tag { font-size: 11px; padding: 0 10px 0 8px; }
   .yn span { height: 36px; }
 }
 
 @media (max-width: 540px) {
-  .m-row { grid-template-columns: minmax(0,1fr); padding: 12px 0; gap: 8px; }
-  .m-row .tag { justify-self: start; }
-  .m-fact { font-size: 11px; }
   .m-head { font-size: 12px; }
   .f { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; }
   .f b { font-size: 18px; }
